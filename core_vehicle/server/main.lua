@@ -178,7 +178,7 @@ end)--]]
 -- Get Vehicle Owned Status:
 QBCore.Functions.CreateCallback('core_vehicle:getIfVehicleOwned',function(source, cb, plate)
     local xPlayer = QBCore.Functions.GetPlayer(source)
-    exports.ghmattimysql:execute("SELECT * FROM owned_vehicles WHERE plate=@plate",{['@plate'] = plate}, function(data) 
+    exports.ghmattimysql:execute("SELECT * FROM player_vehicles WHERE plate=@plate",{['@plate'] = plate}, function(data) 
         if Config.OnlyOwnedVehicles then
 			if(data[1] ~= nil) then
 				cb(true)
