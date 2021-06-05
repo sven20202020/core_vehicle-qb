@@ -113,8 +113,6 @@ Turbos = { -- Turbos affect your car speed at higher rpm's. When turbos break yo
 
 },
 
-NitroKey = 'LEFTSHIFT', -- Key to use nitro when available
-
 Nitros = { -- Nitro affect vehicle power and increases vehicle wear during usage
 
     ['nos'] = {

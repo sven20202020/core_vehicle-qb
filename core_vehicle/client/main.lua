@@ -88,7 +88,7 @@ Citizen.CreateThread(
 								end
 							end
 
-							if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - coords) < 2.0 then
+							if IsControlJustReleased(0, 38) and #(pedCoords - coords) < 2.0 then
 								repairing = true
 
 								Citizen.CreateThread(
@@ -137,7 +137,7 @@ Citizen.CreateThread(
 								end
 							end
 
-							if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - coords) < 2.0 then
+							if IsControlJustReleased(0, 38) and #(pedCoords - coords) < 2.0 then
 								repairing = true
 
 								Citizen.CreateThread(
@@ -188,7 +188,7 @@ Citizen.CreateThread(
 								end
 							end
 
-							if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - coords) < 2.0 then
+							if IsControlJustReleased(0, 38) and #(pedCoords - coords) < 2.0 then
 								repairing = true
 
 								Citizen.CreateThread(
@@ -236,7 +236,7 @@ Citizen.CreateThread(
 								end
 							end
 
-							if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - coords) < 2.0 then
+							if IsControlJustReleased(0, 38) and #(pedCoords - coords) < 2.0 then
 								repairing = true
 
 								Citizen.CreateThread(
@@ -286,7 +286,7 @@ Citizen.CreateThread(
 								end
 							end
 
-							if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - coords) < 2.0 then
+							if IsControlJustReleased(0, 38) and #(pedCoords - coords) < 2.0 then
 								repairing = true
 
 								Citizen.CreateThread(
@@ -333,7 +333,7 @@ Citizen.CreateThread(
 								end
 							end
 
-							if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - coords) < 2.0 then
+							if IsControlJustReleased(0, 38) and #(pedCoords - coords) < 2.0 then
 								repairing = true
 
 								Citizen.CreateThread(
@@ -382,7 +382,7 @@ Citizen.CreateThread(
 								end
 							end
 
-							if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - coords) < 2.0 then
+							if IsControlJustReleased(0, 38) and #(pedCoords - coords) < 2.0 then
 								repairing = true
 
 								Citizen.CreateThread(
@@ -429,7 +429,7 @@ Citizen.CreateThread(
 								end
 							end
 
-							if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - coords) < 2.0 then
+							if IsControlJustReleased(0, 38) and #(pedCoords - coords) < 2.0 then
 								repairing = true
 
 								Citizen.CreateThread(
@@ -478,7 +478,7 @@ Citizen.CreateThread(
 								end
 							end
 
-							if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - coords) < 2.0 then
+							if IsControlJustReleased(0, 38) and #(pedCoords - coords) < 2.0 then
 								repairing = true
 
 								Citizen.CreateThread(
@@ -525,7 +525,7 @@ Citizen.CreateThread(
 								end
 							end
 
-							if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - coords) < 2.0 then
+							if IsControlJustReleased(0, 38) and #(pedCoords - coords) < 2.0 then
 								repairing = true
 
 								Citizen.CreateThread(
@@ -582,7 +582,7 @@ Citizen.CreateThread(
 								end
 							end
 
-							if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - coords) < 2.0 then
+							if IsControlJustReleased(0, 38) and #(pedCoords - coords) < 2.0 then
 								repairing = true
 
 								Citizen.CreateThread(
@@ -636,7 +636,7 @@ Citizen.CreateThread(
 								end
 							end
 
-							if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - coords) < 2.0 then
+							if IsControlJustReleased(0, 38) and #(pedCoords - coords) < 2.0 then
 								repairing = true
 
 								Citizen.CreateThread(
@@ -719,7 +719,7 @@ Citizen.CreateThread(
 							end
 						end
 
-						if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - wheel1) < 1.5 and w1 then
+						if IsControlJustReleased(0, 38) and #(pedCoords - wheel1) < 1.5 and w1 then
 							repairing = true
 
 							Citizen.CreateThread(
@@ -763,7 +763,7 @@ Citizen.CreateThread(
 							)
 						end
 
-						if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - wheel2) < 1.5 and w2 then
+						if IsControlJustReleased(0, 38) and #(pedCoords - wheel2) < 1.5 and w2 then
 							repairing = true
 
 							Citizen.CreateThread(
@@ -806,7 +806,7 @@ Citizen.CreateThread(
 							)
 						end
 
-						if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - wheel3) < 1.5 and w3 then
+						if IsControlJustReleased(0, 38) and #(pedCoords - wheel3) < 1.5 and w3 then
 							repairing = true
 
 							Citizen.CreateThread(
@@ -849,7 +849,7 @@ Citizen.CreateThread(
 							)
 						end
 
-						if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - wheel4) < 1.5 and w4 then
+						if IsControlJustReleased(0, 38) and #(pedCoords - wheel4) < 1.5 and w4 then
 							repairing = true
 
 							Citizen.CreateThread(
@@ -940,7 +940,7 @@ Citizen.CreateThread(
 							end
 						end
 
-						if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - wheel1) < 1.5 and w1 then
+						if IsControlJustReleased(0, 38) and #(pedCoords - wheel1) < 1.5 and w1 then
 							repairing = true
 
 							Citizen.CreateThread(
@@ -982,7 +982,7 @@ Citizen.CreateThread(
 							)
 						end
 
-						if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - wheel2) < 1.5 and w2 then
+						if IsControlJustReleased(0, 38) and #(pedCoords - wheel2) < 1.5 and w2 then
 							repairing = true
 
 							Citizen.CreateThread(
@@ -1024,7 +1024,7 @@ Citizen.CreateThread(
 							)
 						end
 
-						if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - wheel3) < 1.5 and w3 then
+						if IsControlJustReleased(0, 38) and #(pedCoords - wheel3) < 1.5 and w3 then
 							repairing = true
 
 							Citizen.CreateThread(
@@ -1066,7 +1066,7 @@ Citizen.CreateThread(
 							)
 						end
 
-						if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - wheel4) < 1.5 and w4 then
+						if IsControlJustReleased(0, 38) and #(pedCoords - wheel4) < 1.5 and w4 then
 							repairing = true
 
 							Citizen.CreateThread(
@@ -1156,7 +1156,7 @@ Citizen.CreateThread(
 							end
 						end
 
-						if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - wheel1) < 1.5 and w1 then
+						if IsControlJustReleased(0, 38) and #(pedCoords - wheel1) < 1.5 and w1 then
 							repairing = true
 
 							Citizen.CreateThread(
@@ -1198,7 +1198,7 @@ Citizen.CreateThread(
 							)
 						end
 
-						if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - wheel2) < 1.5 and w2 then
+						if IsControlJustReleased(0, 38) and #(pedCoords - wheel2) < 1.5 and w2 then
 							repairing = true
 
 							Citizen.CreateThread(
@@ -1240,7 +1240,7 @@ Citizen.CreateThread(
 							)
 						end
 
-						if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - wheel3) < 1.5 and w3 then
+						if IsControlJustReleased(0, 38) and #(pedCoords - wheel3) < 1.5 and w3 then
 							repairing = true
 
 							Citizen.CreateThread(
@@ -1282,7 +1282,7 @@ Citizen.CreateThread(
 							)
 						end
 
-						if IsControlJustReleased(0, Keys["E"]) and #(pedCoords - wheel4) < 1.5 and w4 then
+						if IsControlJustReleased(0, 38) and #(pedCoords - wheel4) < 1.5 and w4 then
 							repairing = true
 
 							Citizen.CreateThread(
@@ -1562,7 +1562,7 @@ Citizen.CreateThread(
                             SetVehicleEnginePowerMultiplier(currentVehicle, currentMulti)
                         end
                     else
-                        if nitroPower > 0 and IsControlPressed(0, Keys[Config.NitroKey]) then
+                        if nitroPower > 0 and IsControlPressed(0, 21) then
                             if not nitroActive then
                                 currentWear = Config.WearRate / 10
                                 if IsControlPressed(0, 71) then
@@ -1570,7 +1570,7 @@ Citizen.CreateThread(
                                     SetVehicleBoostActive(currentVehicle, true)
                                     SetVehicleLightTrailEnabled(currentVehicle, true)
                                     TriggerServerEvent("core_vehicle:syncNitro", true, false, false)
-                                     StopScreenEffect("RaceTurbo")
+                                    StopScreenEffect("RaceTurbo")
                                 StartScreenEffect("RaceTurbo", 0, false)
                                 SetTimecycleModifier("rply_motionblur")
                                 ShakeGameplayCam("SKY_DIVING_SHAKE", 0.25)
@@ -1585,8 +1585,6 @@ Citizen.CreateThread(
                                 SetVehicleNitroPurgeEnabled(currentVehicle, false)
 
                                 CreateVehicleExhaustBackfire(currentVehicle, 1.25)
-
-                               
 
                                 SetVehicleEnginePowerMultiplier(
                                     currentVehicle,

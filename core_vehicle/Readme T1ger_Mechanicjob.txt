@@ -23,13 +23,13 @@ end
 Add this to the server.lua (from core_vehicle) at the end to be able to use the carjack as item also for the users
 if you use any kind of menu etc you can also use the exported trigger:
 
-ESX.RegisterUsableItem('carjack', function(playerId)
-    local xPlayer = ESX.GetPlayerFromId(playerId)
+QBCore.Functions.CreateUseableItem('carjack', function(playerId)
+    local xPlayer = QBCore.Functions.GetPlayer(playerId)
     local coords = GetEntityCoords(xPlayer)
-    local veh, dst = ESX.Game.GetClosestVehicle(coords)
+    local veh, dst = QBcore.Functions.GetClosestVehicle(coords)
     if dst < 3.0 then
-    exports.t1ger_mechanicjob:CarJackFunction('interact', veh)
+    	exports.t1ger_mechanicjob:CarJackFunction('interact', veh)
     else
-	TriggerClientEvent("core_vehicle:SendTextMessage", src, Config.Text["vehicle_notfound"])
+		TriggerClientEvent("core_vehicle:SendTextMessage", src, Config.Text["vehicle_notfound"])
     end
 end)
