@@ -1418,7 +1418,7 @@ Citizen.CreateThread(
 
             if seat == ped and not inVehicle then
             local plate = GetVehicleNumberPlateText(veh)
-			QBCore.Functions.TriggerCallback('core_vehicle:getIfVehicleOwned', function(vehOwned)
+			QBCore.Functions.TriggerCallback('qb-garage:server:checkVehicleOwner', function(vehOwned)
 			if vehOwned then
             	Citizen.Trace('Vehicle Set')
                 if not repairMode then
@@ -1771,10 +1771,10 @@ AddEventHandler(
                     end
                 end
 
-                local veh, dst = QBCore.Functions.GetClosestVehicle(coords)
+                local veh, dst = GetClosestVehicle_(coords)
 				local plate = GetVehicleNumberPlateText(veh)
 				local localVehLockStatus = GetVehicleDoorLockStatus(veh)
-				QBCore.Functions.TriggerCallback('core_vehicle:getIfVehicleOwned', function(vehOwned)
+				QBCore.Functions.TriggerCallback('qb-garage:server:checkVehicleOwner', function(vehOwned)
                 if dst < Config.DetectDistance and vehOwned then
 				if localVehLockStatus == 1  then
 				--VehicleClass
@@ -2058,12 +2058,12 @@ AddEventHandler(
                 SendTextMessage(Config.Text["wrong_job"])
             end
         elseif tool == "toolbox" then
-            local veh, dst = QBCore.Functions.GetClosestVehicle(coords)
+            local veh, dst = GetClosestVehicle_(coords)
 			local plate = GetVehicleNumberPlateText(veh)
 			local localVehLockStatus = GetVehicleDoorLockStatus(veh)
 			
 			if Config.UseT1gerMechanic then
-			QBCore.Functions.TriggerCallback('core_vehicle:getIfVehicleOwned', function(vehOwned)
+			QBCore.Functions.TriggerCallback('qb-garage:server:checkVehicleOwner', function(vehOwned)
 
             if dst < Config.DetectDistance and vehOwned then
 			if localVehLockStatus == 1 then
@@ -2161,7 +2161,7 @@ AddEventHandler(
 			end
 			end, plate) -- Callback End
 			else
-				QBCore.Functions.TriggerCallback('core_vehicle:getIfVehicleOwned', function(vehOwned)
+				QBCore.Functions.TriggerCallback('qb-garage:server:checkVehicleOwner', function(vehOwned)
 				if dst < Config.DetectDistance and vehOwned then
 				if localVehLockStatus == 1  then
 				local vehicle = GetClosestVehicle(coords.x, coords.y, coords.z, 3.0, 0, 71)
@@ -2361,10 +2361,10 @@ RegisterCommand(
     function()
         local ped = PlayerPedId()
         local coords = GetEntityCoords(ped)
-        local veh, dst = QBCore.Functions.GetClosestVehicle(coords)
+        local veh, dst = GetClosestVehicle_(coords)
 		local plate = GetVehicleNumberPlateText(veh)
 		local localVehLockStatus = GetVehicleDoorLockStatus(veh)
-		QBCore.Functions.TriggerCallback('core_vehicle:getIfVehicleOwned', function(vehOwned)
+		QBCore.Functions.TriggerCallback('qb-garage:server:checkVehicleOwner', function(vehOwned)
         if dst < Config.DetectDistance and vehOwned then
 		if localVehLockStatus == 1 then
 		--Check for Hood
@@ -3017,6 +3017,11 @@ function loadAnimDict(dict)
 	end
 end
 
+function GetClosestVehicle_(coords)
+    veh = GetClosestVehicle(coords, 5.000, 0, 70)
+
+    return veh, #(coords - GetEntityCoords(veh))
+end
 --Playing with a key to start/stop the engine
 --[[Citizen.CreateThread(function()
     while true do
