@@ -270,14 +270,14 @@ function openVehicleMenu() {
 
 
   if (!turbo && workshop) {
-    base = base + '    <div class="gradient grpelem box" data-type="uninstalled" data-uninstalled="turbo" style="opacity: 0.7;" id="u126"><!-- column -->' +
+    base = base + '    <div class="gradient grpelem box" style="background: url(img/turbo-unin.png) no-repeat center; background-size: 90%; " data-type="uninstalled" data-uninstalled="turbo" style="opacity: 0.7;" id="u126"><!-- column -->' +
       '     <div class="colelem" id="u247" data-sizePolicy="fixed" data-pintopage="page_fixedRight"><!-- rasterized frame --></div>' +
 
       '    </div>';
   }
 
   if (!nitro && workshop) {
-    base = base + '    <div class="gradient grpelem box" data-type="uninstalled" data-uninstalled="nitro" style="opacity: 0.7;" id="u126"><!-- column -->' +
+    base = base + '    <div class="gradient grpelem box" style="background: url(img/nitro-unin.png) no-repeat center; background-size: 90%; " data-type="uninstalled" data-uninstalled="nitro" style="opacity: 0.7;" id="u126"><!-- column -->' +
       '     <div class="colelem" id="u247" data-sizePolicy="fixed" data-pintopage="page_fixedRight"><!-- rasterized frame --></div>' +
 
       '    </div>';
