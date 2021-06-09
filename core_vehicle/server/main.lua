@@ -142,7 +142,7 @@ AddEventHandler("core_vehicle:setVehicleParts", function(plate, parts, mileage)
 end)
 
 QBCore.Functions.CreateUseableItem("toolbox" , function(playerId)
-    TriggerClientEvent('core_vehicle:toolUsed, playerId, "toolbox')
+    TriggerClientEvent('core_vehicle:toolUsed', playerId, "toolbox")
 end)
 
 QBCore.Functions.CreateUseableItem("mechanic_tools" , function(playerId)
@@ -158,35 +158,4 @@ AddEventHandler("core_vehicle:syncNitro", function(boostEnabled, purgeEnabled, l
             TriggerClientEvent("core_vehicle:sync", player, source, boostEnabled, purgeEnabled, lastVehicle)
         end
     end
-end)
-
--- Get Vehicle Owned Status:
---[[QBCore.Functions.CreateCallback('core_vehicle:getIfVehicleOwned',function(source, cb, plate)
-    exports.ghmattimysql:execute("SELECT * FROM owned_vehicles WHERE plate=@plate",{['@plate'] = plate}, function(data) 
-        if Config.OnlyOwnedVehicles then
-        if #data > 0 then
-            cb(true)
-        else
-            cb(false)
-        end
-    else
-            cb(true)
-    end
-    end)
-end)--]]
-
--- Get Vehicle Owned Status:
-QBCore.Functions.CreateCallback('core_vehicle:getIfVehicleOwned',function(source, cb, plate)
-    local xPlayer = QBCore.Functions.GetPlayer(source)
-    exports.ghmattimysql:execute("SELECT * FROM player_vehicles WHERE plate=@plate",{['@plate'] = plate}, function(data) 
-        if Config.OnlyOwnedVehicles then
-			if(data[1] ~= nil) then
-				cb(true)
-			else
-				cb(false)
-			end
-		else
-            cb(true)
-		end
-    end)
 end)
