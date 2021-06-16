@@ -46,7 +46,7 @@ Citizen.CreateThread(function()
         currentWear = Config.WearRate
 end)
 
-RegisterNetEvent('QBCore:Client:OnJobUpdate'),
+RegisterNetEvent('QBCore:Client:OnJobUpdate')
 AddEventHandler('QBCore:Client:OnJobUpdate', function(JobInfo)
     job = JobInfo.name
 end)
